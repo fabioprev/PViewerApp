@@ -5,6 +5,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class SettingsActivity extends Activity
 {
@@ -29,15 +30,40 @@ public class SettingsActivity extends Activity
 			worldYMin = Float.parseFloat(worldYMinEditText.getText().toString());
 			worldYMax = Float.parseFloat(worldYMaxEditText.getText().toString());
 			
-			if (visualizationFrequency <= 0) return;
+			if (visualizationFrequency <= 0)
+			{
+				Toast.makeText(this,"The visualization frequency must be greater than 0",Toast.LENGTH_LONG).show();
+				
+				return;
+			}
 			
-			if (Math.abs(worldXMin) > 100.0f) return;
+			if (Math.abs(worldXMin) > 100.0f)
+			{
+				Toast.makeText(this,"World x min must be within [-100.0,100.0]",Toast.LENGTH_LONG).show();
+				
+				return;
+			}
 			
-			if (Math.abs(worldXMax) > 100.0f) return;
+			if (Math.abs(worldXMax) > 100.0f)
+			{
+				Toast.makeText(this,"World x max must be within [-100.0,100.0]",Toast.LENGTH_LONG).show();
+				
+				return;
+			}
 			
-			if (Math.abs(worldYMin) > 100.0f) return;
+			if (Math.abs(worldYMin) > 100.0f)
+			{
+				Toast.makeText(this,"World y min must be within [-100.0,100.0]",Toast.LENGTH_LONG).show();
+				
+				return;
+			}
 			
-			if (Math.abs(worldYMax) > 100.0f) return;
+			if (Math.abs(worldYMax) > 100.0f)
+			{
+				Toast.makeText(this,"World y max must be within [-100.0,100.0]",Toast.LENGTH_LONG).show();
+				
+				return;
+			}
 			
 			Intent intent = new Intent(this,MainActivity.class);
 			
