@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:background="#000000"
+	android:stretchColumns="0,1,2" >
+	
+	<TableRow>
+		<TextView
+			android:id="@+id/label_visualization_frequency"
+			android:textColor="#FFFFFF"
+			android:textSize="18sp"
+			android:textStyle="bold"
+			android:layout_marginLeft="10dp"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/label_visualization_frequency"
+			android:layout_column="0"
+			android:layout_span="1" />
+		
+		<EditText
+			android:id="@+id/visualization_frequency"
+			android:textColor="#000000"
+			android:background="@android:drawable/editbox_background_normal"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginRight="10dp"
+			android:hint="@string/visualization_frequency"
+			android:inputType="number"
+			android:maxLength="2"
+			android:text="@string/visualization_frequency_value"
+			android:layout_column="2"
+			android:layout_span="1"
+			android:gravity="center" />
+	</TableRow>
+	
+	<TableRow>
+		<TextView
+			android:id="@+id/label_world_x_min"
+			android:textColor="#FFFFFF"
+			android:textSize="18sp"
+			android:textStyle="bold"
+			android:layout_marginLeft="10dp"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/label_world_x_min"
+			android:layout_column="0"
+			android:layout_span="1" />
+		
+		<EditText
+			android:id="@+id/world_x_min"
+			android:textColor="#000000"
+			android:background="@android:drawable/editbox_background_normal"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginRight="10dp"
+			android:inputType="numberDecimal"
+			android:maxLength="4"
+			android:text="@string/world_x_min_value"
+			android:layout_column="2"
+			android:layout_span="1"
+			android:gravity="center" />
+	</TableRow>
+	
+	<TableRow>
+		<TextView
+			android:id="@+id/label_world_x_max"
+			android:textColor="#FFFFFF"
+			android:textSize="18sp"
+			android:textStyle="bold"
+			android:layout_marginLeft="10dp"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/label_world_x_max"
+			android:layout_column="0"
+			android:layout_span="1" />
+		
+		<EditText
+			android:id="@+id/world_x_max"
+			android:textColor="#000000"
+			android:background="@android:drawable/editbox_background_normal"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginRight="10dp"
+			android:inputType="numberDecimal"
+			android:maxLength="4"
+			android:text="@string/world_x_max_value"
+			android:layout_column="2"
+			android:layout_span="1"
+			android:gravity="center" />
+	</TableRow>
+	
+	<TableRow>
+		<TextView
+			android:id="@+id/label_world_y_min"
+			android:textColor="#FFFFFF"
+			android:textSize="18sp"
+			android:textStyle="bold"
+			android:layout_marginLeft="10dp"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/label_world_y_min"
+			android:layout_column="0"
+			android:layout_span="1" />
+		
+		<EditText
+			android:id="@+id/world_y_min"
+			android:textColor="#000000"
+			android:background="@android:drawable/editbox_background_normal"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginRight="10dp"
+			android:inputType="numberDecimal"
+			android:maxLength="4"
+			android:text="@string/world_y_min_value"
+			android:layout_column="2"
+			android:layout_span="1"
+			android:gravity="center" />
+	</TableRow>
+	
+	<TableRow>
+		<TextView
+			android:id="@+id/label_world_y_max"
+			android:textColor="#FFFFFF"
+			android:textSize="18sp"
+			android:textStyle="bold"
+			android:layout_marginLeft="10dp"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/label_world_y_max"
+			android:layout_column="0"
+			android:layout_span="1" />
+		
+		<EditText
+			android:id="@+id/world_y_max"
+			android:textColor="#000000"
+			android:background="@android:drawable/editbox_background_normal"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginRight="10dp"
+			android:inputType="numberDecimal"
+			android:maxLength="4"
+			android:text="@string/world_y_max_value"
+			android:layout_column="2"
+			android:layout_span="1"
+			android:gravity="center" />
+	</TableRow>
+	
+	<TableRow>
+		<Button
+			android:textColor="#FFFFFF"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/button_done"
+			android:onClick="doneEvent"
+			android:layout_marginRight="10dp"
+			android:layout_column="2"
+			android:layout_span="1" />
+	</TableRow>
+</TableLayout>
