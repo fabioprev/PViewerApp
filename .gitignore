@@ -1,3 +1,7 @@
+#Eclipse
+.classpath
+.project
+
 # Built application files
 *.apk
 *.ap_
