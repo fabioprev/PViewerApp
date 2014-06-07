@@ -24,43 +24,61 @@ public class SettingsActivity extends Activity
 			worldYMinEditText = (EditText) findViewById(R.id.world_y_min);
 			worldYMaxEditText = (EditText) findViewById(R.id.world_y_max);
 			
-			visualizationFrequency = Integer.parseInt(visualizationFrequencyEditText.getText().toString());
-			worldXMin = Float.parseFloat(worldXMinEditText.getText().toString());
-			worldXMax = Float.parseFloat(worldXMaxEditText.getText().toString());
-			worldYMin = Float.parseFloat(worldYMinEditText.getText().toString());
-			worldYMax = Float.parseFloat(worldYMaxEditText.getText().toString());
-			
-			if (visualizationFrequency <= 0)
+			if (Integer.parseInt(visualizationFrequencyEditText.getText().toString()) <= 0)
 			{
 				Toast.makeText(this,"The visualization frequency must be greater than 0",Toast.LENGTH_LONG).show();
 				
 				return;
 			}
 			
-			if (Math.abs(worldXMin) > 100.0f)
+			visualizationFrequency = Integer.parseInt(visualizationFrequencyEditText.getText().toString());
+			
+			if (Math.abs(Float.parseFloat(worldXMinEditText.getText().toString())) > 100.0f)
 			{
 				Toast.makeText(this,"World x min must be within [-100.0,100.0]",Toast.LENGTH_LONG).show();
 				
 				return;
 			}
 			
-			if (Math.abs(worldXMax) > 100.0f)
+			worldXMin = Float.parseFloat(worldXMinEditText.getText().toString());
+			
+			if (Math.abs(Float.parseFloat(worldXMaxEditText.getText().toString())) > 100.0f)
 			{
 				Toast.makeText(this,"World x max must be within [-100.0,100.0]",Toast.LENGTH_LONG).show();
 				
 				return;
 			}
 			
-			if (Math.abs(worldYMin) > 100.0f)
+			worldXMax = Float.parseFloat(worldXMaxEditText.getText().toString());
+			
+			if (Math.abs(Float.parseFloat(worldYMinEditText.getText().toString())) > 100.0f)
 			{
 				Toast.makeText(this,"World y min must be within [-100.0,100.0]",Toast.LENGTH_LONG).show();
 				
 				return;
 			}
 			
-			if (Math.abs(worldYMax) > 100.0f)
+			worldYMin = Float.parseFloat(worldYMinEditText.getText().toString());
+			
+			if (Math.abs(Float.parseFloat(worldYMaxEditText.getText().toString())) > 100.0f)
 			{
 				Toast.makeText(this,"World y max must be within [-100.0,100.0]",Toast.LENGTH_LONG).show();
+				
+				return;
+			}
+			
+			worldYMax = Float.parseFloat(worldYMaxEditText.getText().toString());
+			
+			if (worldXMin >= worldXMax)
+			{
+				Toast.makeText(this,"World x min must be lower than world x max",Toast.LENGTH_LONG).show();
+				
+				return;
+			}
+			
+			if (worldYMin >= worldYMax)
+			{
+				Toast.makeText(this,"World y min must be lower than world y max",Toast.LENGTH_LONG).show();
 				
 				return;
 			}
@@ -99,6 +117,23 @@ public class SettingsActivity extends Activity
 		super.onCreate(savedInstanceState);
 		
 		setContentView(R.layout.activity_settings);
+		
+		if (visualizationFrequency == 0)
+		{
+			EditText visualizationFrequencyEditText, worldXMinEditText, worldXMaxEditText, worldYMinEditText, worldYMaxEditText;
+			
+			visualizationFrequencyEditText = (EditText) findViewById(R.id.visualization_frequency);
+			worldXMinEditText = (EditText) findViewById(R.id.world_x_min);
+			worldXMaxEditText = (EditText) findViewById(R.id.world_x_max);
+			worldYMinEditText = (EditText) findViewById(R.id.world_y_min);
+			worldYMaxEditText = (EditText) findViewById(R.id.world_y_max);
+			
+			visualizationFrequency = Integer.parseInt(visualizationFrequencyEditText.getText().toString());
+			worldXMin = Float.parseFloat(worldXMinEditText.getText().toString());
+			worldXMax = Float.parseFloat(worldXMaxEditText.getText().toString());
+			worldYMin = Float.parseFloat(worldYMinEditText.getText().toString());
+			worldYMax = Float.parseFloat(worldYMaxEditText.getText().toString());
+		}
 	}
 	
 	protected void onDestroy()

@@ -256,7 +256,7 @@ public class PViewerActivity extends Activity
 			
 			paint.setColor(Color.RED);
 			
-			canvas.drawText("" + visualizationFrequency,270,28,paint);
+			canvas.drawText("" + visualizationFrequency + " Hz",270,28,paint);
 		}
 		
 		private void parseDataReceived()
