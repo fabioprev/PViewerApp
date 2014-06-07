@@ -2,19 +2,34 @@
 <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
 	android:layout_width="fill_parent"
 	android:layout_height="fill_parent"
-	android:stretchColumns="0,1,2,3,4,5" >
+	android:background="@drawable/background_settings_landscape"
+	android:stretchColumns="0,1,2,3,4,5,6,7,8,9,10,11,12,13" >
 	
+    <TableRow>
+        <TextView
+			android:id="@+id/blank_1"
+			android:textColor="#FFFFFF"
+			android:textSize="18sp"
+			android:textStyle="bold"
+			android:layout_marginTop="100dp"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/blank_1"
+			android:layout_column="0"
+			android:layout_span="6" />
+    </TableRow>
+    
 	<TableRow>
 		<TextView
 			android:id="@+id/label_visualization_frequency"
 			android:textColor="#FFFFFF"
 			android:textSize="18sp"
 			android:textStyle="bold"
-			android:layout_marginLeft="10dp"
+			android:layout_marginLeft="-35dp"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
 			android:text="@string/label_visualization_frequency"
-			android:layout_column="0"
+			android:layout_column="6"
 			android:layout_span="1" />
 		
 		<EditText
@@ -23,12 +38,11 @@
 			android:background="@android:drawable/editbox_background_normal"
 			android:layout_width="fill_parent"
 			android:layout_height="wrap_content"
-			android:layout_marginRight="10dp"
 			android:hint="@string/visualization_frequency"
 			android:inputType="number"
 			android:maxLength="2"
 			android:text="@string/visualization_frequency_value"
-			android:layout_column="5"
+			android:layout_column="7"
 			android:layout_span="1"
 			android:gravity="center" />
 	</TableRow>
@@ -39,11 +53,11 @@
 			android:textColor="#FFFFFF"
 			android:textSize="18sp"
 			android:textStyle="bold"
-			android:layout_marginLeft="10dp"
+			android:layout_marginLeft="-35dp"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
 			android:text="@string/label_world_x_min"
-			android:layout_column="0"
+			android:layout_column="6"
 			android:layout_span="1" />
 		
 		<EditText
@@ -52,11 +66,10 @@
 			android:background="@android:drawable/editbox_background_normal"
 			android:layout_width="fill_parent"
 			android:layout_height="wrap_content"
-			android:layout_marginRight="10dp"
 			android:inputType="numberDecimal"
 			android:maxLength="4"
 			android:text="@string/world_x_min_value"
-			android:layout_column="5"
+			android:layout_column="7"
 			android:layout_span="1"
 			android:gravity="center" />
 	</TableRow>
@@ -67,11 +80,11 @@
 			android:textColor="#FFFFFF"
 			android:textSize="18sp"
 			android:textStyle="bold"
-			android:layout_marginLeft="10dp"
+			android:layout_marginLeft="-35dp"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
 			android:text="@string/label_world_x_max"
-			android:layout_column="0"
+			android:layout_column="6"
 			android:layout_span="1" />
 		
 		<EditText
@@ -80,11 +93,10 @@
 			android:background="@android:drawable/editbox_background_normal"
 			android:layout_width="fill_parent"
 			android:layout_height="wrap_content"
-			android:layout_marginRight="10dp"
 			android:inputType="numberDecimal"
 			android:maxLength="4"
 			android:text="@string/world_x_max_value"
-			android:layout_column="5"
+			android:layout_column="7"
 			android:layout_span="1"
 			android:gravity="center" />
 	</TableRow>
@@ -95,11 +107,11 @@
 			android:textColor="#FFFFFF"
 			android:textSize="18sp"
 			android:textStyle="bold"
-			android:layout_marginLeft="10dp"
+			android:layout_marginLeft="-35dp"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
 			android:text="@string/label_world_y_min"
-			android:layout_column="0"
+			android:layout_column="6"
 			android:layout_span="1" />
 		
 		<EditText
@@ -108,11 +120,10 @@
 			android:background="@android:drawable/editbox_background_normal"
 			android:layout_width="fill_parent"
 			android:layout_height="wrap_content"
-			android:layout_marginRight="10dp"
 			android:inputType="numberDecimal"
 			android:maxLength="4"
 			android:text="@string/world_y_min_value"
-			android:layout_column="5"
+			android:layout_column="7"
 			android:layout_span="1"
 			android:gravity="center" />
 	</TableRow>
@@ -123,11 +134,11 @@
 			android:textColor="#FFFFFF"
 			android:textSize="18sp"
 			android:textStyle="bold"
-			android:layout_marginLeft="10dp"
+			android:layout_marginLeft="-35dp"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
 			android:text="@string/label_world_y_max"
-			android:layout_column="0"
+			android:layout_column="6"
 			android:layout_span="1" />
 		
 		<EditText
@@ -136,24 +147,37 @@
 			android:background="@android:drawable/editbox_background_normal"
 			android:layout_width="fill_parent"
 			android:layout_height="wrap_content"
-			android:layout_marginRight="10dp"
 			android:inputType="numberDecimal"
 			android:maxLength="4"
 			android:text="@string/world_y_max_value"
-			android:layout_column="5"
+			android:layout_column="7"
 			android:layout_span="1"
 			android:gravity="center" />
 	</TableRow>
 	
 	<TableRow>
 		<Button
-			android:textColor="#FFFFFF"
+			android:textColor="#000000"
+			android:textSize="18sp"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
 			android:text="@string/button_done"
-			android:layout_marginRight="10dp"
 			android:onClick="doneEvent"
-			android:layout_column="5"
+			android:layout_marginTop="6dp"
+			android:layout_column="7"
 			android:layout_span="1" />
 	</TableRow>
+	
+	<TableRow>
+        <TextView
+			android:id="@+id/blank_2"
+			android:textColor="#FFFFFF"
+			android:textSize="18sp"
+			android:textStyle="bold"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/blank_2"
+			android:layout_column="7"
+			android:layout_span="6" />
+    </TableRow>
 </TableLayout>
